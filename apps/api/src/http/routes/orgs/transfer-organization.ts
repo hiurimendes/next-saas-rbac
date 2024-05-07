@@ -65,7 +65,7 @@ export async function transferOrganization(app: FastifyInstance) {
             'Target user is not a member of this organization.',
           )
         }
-,
+
         await prisma.$transaction([
           prisma.member.update({
             where: {
@@ -82,7 +82,7 @@ export async function transferOrganization(app: FastifyInstance) {
           prisma.organization.update({
             where: { id: organization.id },
             data: { ownerId: transferToUserId },
-          })
+          }),
         ])
 
         return reply.status(204).send()
