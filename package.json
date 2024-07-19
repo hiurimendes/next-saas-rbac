@@ -10,6 +10,7 @@
     "turbo": "latest"
   },
   "package-manager-strict": false,
+  "packageManager": "pnpm@9.5.0",
   "engines": {
     "node": ">=18"
   }

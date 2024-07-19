@@ -10,7 +10,7 @@ importers:
     devDependencies:
       turbo:
         specifier: latest
-        version: 1.13.2
+        version: 2.0.8
 
   apps/api:
     dependencies:
@@ -108,6 +108,9 @@ importers:
       '@saas/env':
         specifier: workspace:*
         version: link:../../packages/env
+      '@tanstack/react-query':
+        specifier: ^5.51.9
+        version: 5.51.9(react@19.0.0-rc-f994737d14-20240522)
       class-variance-authority:
         specifier: ^0.7.0
         version: 0.7.0
@@ -1082,6 +1085,14 @@ packages:
     peerDependenciesMeta:
       typescript:
         optional: true
+
+  '@tanstack/query-core@5.51.9':
+    resolution: {integrity: sha512-HsAwaY5J19MD18ykZDS3aVVh+bAt0i7m6uQlFC2b77DLV9djo+xEN7MWQAQQTR8IM+7r/zbozTQ7P0xr0bHuew==}
+
+  '@tanstack/react-query@5.51.9':
+    resolution: {integrity: sha512-F8j6i42wfKvFrRcxfOyFyYME+bPfNthAGOSkjdv4UwZZXJjnBnBs/yRQGT0bD23LVCTuBzlIfZ0GKSIyclZ9rQ==}
+    peerDependencies:
+      react: ^18.0.0
 
   '@types/bcryptjs@2.4.6':
     resolution: {integrity: sha512-9xlo6R2qDs5uixm0bcIqCeMCE6HiQsIyel9KQySStiyqNl2tnj2mP3DX1Nf56MD6KMenNNlBBsy3LJ7gUEQPXQ==}
@@ -2876,38 +2887,38 @@ packages:
     engines: {node: '>=18.0.0'}
     hasBin: true
 
-  turbo-darwin-64@1.13.2:
-    resolution: {integrity: sha512-CCSuD8CfmtncpohCuIgq7eAzUas0IwSbHfI8/Q3vKObTdXyN8vAo01gwqXjDGpzG9bTEVedD0GmLbD23dR0MLA==}
+  turbo-darwin-64@2.0.8:
+    resolution: {integrity: sha512-WxPAmpkJXTBfa2tmfLk1YI2eFc5vk8eOQS1gRA3bMfwDory1tKhdPGamDrVtMzMguCiWIvit5JU3x5SHJTLP9A==}
     cpu: [x64]
     os: [darwin]
 
-  turbo-darwin-arm64@1.13.2:
-    resolution: {integrity: sha512-0HySm06/D2N91rJJ89FbiI/AodmY8B3WDSFTVEpu2+8spUw7hOJ8okWOT0e5iGlyayUP9gr31eOeL3VFZkpfCw==}
+  turbo-darwin-arm64@2.0.8:
+    resolution: {integrity: sha512-sMPkU2GiW5OotJNPWmCWGuoltjRilmazXd6EfKK12eoq4rR1PGxUtvKY8LOLHIudDDcB4VUbxWSgHR/VBezhuw==}
     cpu: [arm64]
     os: [darwin]
 
-  turbo-linux-64@1.13.2:
-    resolution: {integrity: sha512-7HnibgbqZrjn4lcfIouzlPu8ZHSBtURG4c7Bedu7WJUDeZo+RE1crlrQm8wuwO54S0siYqUqo7GNHxu4IXbioQ==}
+  turbo-linux-64@2.0.8:
+    resolution: {integrity: sha512-5Uq3M36V1BBMbxdIoZHxzVdaSeJ2Uyp6lMj9L58iLX9wBPlrUY1f150Ys/PGOyTfyzL+wz2tqPqAsDSRSRhRIQ==}
     cpu: [x64]
     os: [linux]
 
-  turbo-linux-arm64@1.13.2:
-    resolution: {integrity: sha512-sUq4dbpk6SNKg/Hkwn256Vj2AEYSQdG96repio894h5/LEfauIK2QYiC/xxAeW3WBMc6BngmvNyURIg7ltrePg==}
+  turbo-linux-arm64@2.0.8:
+    resolution: {integrity: sha512-b5EPHMNbR34z8aEosGQDb4m22o8VuWW3Nr5z3jbl+PMBJByBvGl/A5oYZIQfcJhRD5Ih/H1tqi7ftbrwouC3tQ==}
     cpu: [arm64]
     os: [linux]
 
-  turbo-windows-64@1.13.2:
-    resolution: {integrity: sha512-DqzhcrciWq3dpzllJR2VVIyOhSlXYCo4mNEWl98DJ3FZ08PEzcI3ceudlH6F0t/nIcfSItK1bDP39cs7YoZHEA==}
+  turbo-windows-64@2.0.8:
+    resolution: {integrity: sha512-2CKNENrm+/PaQEXcLqz0rd8KzppV6bO7Dju89bniKFo684Ip8zpq1YkOxGrhRPSgIFHKXph0ZmSoErqyfXoi5Q==}
     cpu: [x64]
     os: [win32]
 
-  turbo-windows-arm64@1.13.2:
-    resolution: {integrity: sha512-WnPMrwfCXxK69CdDfS1/j2DlzcKxSmycgDAqV0XCYpK/812KB0KlvsVAt5PjEbZGXkY88pCJ1BLZHAjF5FcbqA==}
+  turbo-windows-arm64@2.0.8:
+    resolution: {integrity: sha512-10FZPqk2hzRo6pT3ze5DdfMS5beMMc6vYw61FSwoqoXefFFhPm/2IIuVpLFnhfuqroWtmb5ilQtHeNSYEXSv5Q==}
     cpu: [arm64]
     os: [win32]
 
-  turbo@1.13.2:
-    resolution: {integrity: sha512-rX/d9f4MgRT3yK6cERPAkfavIxbpBZowDQpgvkYwGMGDQ0Nvw1nc0NVjruE76GrzXQqoxR1UpnmEP54vBARFHQ==}
+  turbo@2.0.8:
+    resolution: {integrity: sha512-4BHTlXy/Sjtcy5skq3OBTQdTSkxbBbRhrQzEiRBcrc6OuEWe0iAefoYqJR0+c7dqD79AYqE/EJsDwE9kSq0YSA==}
     hasBin: true
 
   type-check@0.4.0:
@@ -3789,6 +3800,13 @@ snapshots:
       zod: 3.23.4
     optionalDependencies:
       typescript: 5.4.5
+
+  '@tanstack/query-core@5.51.9': {}
+
+  '@tanstack/react-query@5.51.9(react@19.0.0-rc-f994737d14-20240522)':
+    dependencies:
+      '@tanstack/query-core': 5.51.9
+      react: 19.0.0-rc-f994737d14-20240522
 
   '@types/bcryptjs@2.4.6': {}
 
@@ -5799,32 +5817,32 @@ snapshots:
     optionalDependencies:
       fsevents: 2.3.3
 
-  turbo-darwin-64@1.13.2:
+  turbo-darwin-64@2.0.8:
     optional: true
 
-  turbo-darwin-arm64@1.13.2:
+  turbo-darwin-arm64@2.0.8:
     optional: true
 
-  turbo-linux-64@1.13.2:
+  turbo-linux-64@2.0.8:
     optional: true
 
-  turbo-linux-arm64@1.13.2:
+  turbo-linux-arm64@2.0.8:
     optional: true
 
-  turbo-windows-64@1.13.2:
+  turbo-windows-64@2.0.8:
     optional: true
 
-  turbo-windows-arm64@1.13.2:
+  turbo-windows-arm64@2.0.8:
     optional: true
 
-  turbo@1.13.2:
+  turbo@2.0.8:
     optionalDependencies:
-      turbo-darwin-64: 1.13.2
-      turbo-darwin-arm64: 1.13.2
-      turbo-linux-64: 1.13.2
-      turbo-linux-arm64: 1.13.2
-      turbo-windows-64: 1.13.2
-      turbo-windows-arm64: 1.13.2
+      turbo-darwin-64: 2.0.8
+      turbo-darwin-arm64: 2.0.8
+      turbo-linux-64: 2.0.8
+      turbo-linux-arm64: 2.0.8
+      turbo-windows-64: 2.0.8
+      turbo-windows-arm64: 2.0.8
 
   type-check@0.4.0:
     dependencies:

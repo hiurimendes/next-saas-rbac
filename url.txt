@@ -1,1 +1,0 @@
-https://github.com/login/oauth/authorize?client_id=0ee29b65c9828def8ed2&redirect_uri=http://localhost:3000/api/auth/callback&scope=user:email
