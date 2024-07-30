@@ -3,6 +3,9 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Table, TableBody, TableCell, TableRow } from '@/components/ui/table'
 import { getInvites } from '@/http/get-invites'
 
+import { CreateInviteForm } from './create-invite-form'
+import { RevokeInviteButton } from './revoke-invite-button'
+
 export async function Invites() {
   const currentOrg = getCurrentOrg()
   const permissions = await ability()
@@ -15,7 +18,9 @@ export async function Invites() {
           <CardHeader>
             <CardTitle>Invite member</CardTitle>
           </CardHeader>
-          <CardContent></CardContent>
+          <CardContent>
+            <CreateInviteForm />
+          </CardContent>
         </Card>
       )}
 
@@ -39,11 +44,22 @@ export async function Invites() {
                     </TableCell>
 
                     <TableCell className="py-2.5">
-                      <div className="flex justify-end">{permissions?.can()}</div>
+                      <div className="flex justify-end">
+                        {permissions?.can('delete', 'Invite') && (
+                          <RevokeInviteButton inviteId={invite.id} />
+                        )}
+                      </div>
                     </TableCell>
                   </TableRow>
                 )
               })}
+              {invites.length === 0 && (
+                <TableRow>
+                  <TableCell className="text-center text-muted-foreground">
+                    No invites found
+                  </TableCell>
+                </TableRow>
+              )}
             </TableBody>
           </Table>
         </div>
