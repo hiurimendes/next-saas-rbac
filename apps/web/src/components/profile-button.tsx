@@ -21,7 +21,7 @@ function getInitials(name: string): string {
 }
 
 export async function ProfileButton() {
-  const user = await auth()
+  const { user } = await auth()
 
   return (
     <DropdownMenu>

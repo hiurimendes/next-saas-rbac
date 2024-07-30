@@ -20,19 +20,17 @@ export async function getCurrentMembership() {
     return null
   }
 
-  const membership = getMembership(org)
+  const { membership } = await getMembership(org)
 
   return membership
 }
 
 export async function ability() {
-  const currentMembership = await getCurrentMembership()
+  const membership = await getCurrentMembership()
 
-  if (!currentMembership) {
+  if (!membership) {
     return null
   }
-
-  const { membership } = currentMembership
 
   const ability = defineAbilityFor({
     id: membership.userId,
@@ -52,7 +50,7 @@ export async function auth() {
   try {
     const { user } = await getProfile()
 
-    return user
+    return { user }
   } catch {}
 
   redirect('/api/auth/sign-out')
