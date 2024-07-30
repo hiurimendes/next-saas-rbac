@@ -23,7 +23,7 @@ export async function Tabs() {
             size="sm"
             className="border border-transparent data-[current=true]:border-border text-muted-foreground data-[current=true]:text-foreground"
           >
-            <NavLink href={`/org/${currentOrg}/projects`}>Projects</NavLink>
+            <NavLink href={`/org/${currentOrg}`}>Projects</NavLink>
           </Button>
         )}
 
