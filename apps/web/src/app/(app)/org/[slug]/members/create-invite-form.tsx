@@ -17,8 +17,10 @@ import { useFormState } from '@/hooks/use-form-state'
 import { createInviteAction } from './actions'
 
 export function CreateInviteForm() {
-  const [{ success, message, errors }, handleSubmit, isPending] =
-    useFormState(createInviteAction)
+  const [{ success, message, errors }, handleSubmit, isPending] = useFormState(
+    createInviteAction,
+    () => {},
+  )
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
